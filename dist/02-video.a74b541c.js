@@ -512,12 +512,6 @@ console.log(player);
 player.on("timeupdate", function(data) {
     localStorage.setItem("videoplayer-current-time", data.seconds);
 });
-const currentTime = localStorage.getItem("videoplayer-current-time");
-const number = +currentTime;
-const savedTime = localStorage.getItem("videoplayer-current-time");
-if (savedTime) player.setCurrentTime(savedTime).then(function() {
-    player.play();
-});
 
 },{"@vimeo/player":"kmmUG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kmmUG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");

@@ -8,12 +8,3 @@ player.on('timeupdate', function(data) {
     localStorage.setItem("videoplayer-current-time", data.seconds);
 });
 
-const currentTime = localStorage.getItem("videoplayer-current-time");
-const number = +currentTime;
-
-const savedTime = localStorage.getItem('videoplayer-current-time');
-if (savedTime) {
-  player.setCurrentTime(savedTime).then(function() {
-    player.play();
-  });
-}
